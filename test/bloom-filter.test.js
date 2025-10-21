@@ -1,6 +1,6 @@
-const { assert, expect } = require("chai");
-const BloomFilter = require('../src/bloom-filter');
-const { testOptional } = require("../extensions/index.js");
+import { assert, expect } from "chai";
+import BloomFilter from '../src/bloom-filter.js';
+import { testOptional } from "../extensions/index.js";
 
 it.optional = testOptional;
 

@@ -1,10 +1,10 @@
-const { CONSTANTS } = require("./constants.js");
+import { CONSTANTS } from "./constants.js";
 
 const { SPECIAL_PROP_VALUE } = CONSTANTS;
 
-module.exports.NotImplementedError = class extends Error {
+export class NotImplementedError extends Error {
   constructor(message) {
     super(message);
     this._specialProp = SPECIAL_PROP_VALUE;
   }
-};
+}

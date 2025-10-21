@@ -1,10 +1,10 @@
-const { CONSTANTS } = require("./constants.js");
+import { CONSTANTS } from "./constants.js";
 
 const { SPECIAL_PROP_VALUE } = CONSTANTS;
 
-module.exports.testOptional = function (title, fn, isAsyncTest) {
+export function testOptional(title, fn, isAsyncTest) {
   if (isAsyncTest) {
-    it(title, function test(done) {
+    global.it(title, function test(done) {
       try {
         fn.call(this, done);
       } catch (err) {
@@ -16,7 +16,7 @@ module.exports.testOptional = function (title, fn, isAsyncTest) {
       }
     });
   } else {
-    it(title, function test() {
+    global.it(title, function test() {
       try {
         fn.call(this);
       } catch (err) {
@@ -28,4 +28,4 @@ module.exports.testOptional = function (title, fn, isAsyncTest) {
       }
     });
   }
-};
+}

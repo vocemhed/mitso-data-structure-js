@@ -1,6 +1,6 @@
-const { NotImplementedError } = require("../extensions/index.js");
+import { NotImplementedError } from "../extensions/index.js";
 
-module.exports = class BloomFilter {
+export default class BloomFilter {
   /**
    * @param {number} size - the size of the storage.
    */
@@ -77,4 +77,4 @@ module.exports = class BloomFilter {
     throw new NotImplementedError("Not implemented");
     // remove line with error and write your code here
   }
-};
+}

@@ -1,4 +1,4 @@
-module.exports.ListNode = function (x) {
+export function ListNode(x) {
   this.value = x;
   this.next = null;
 }
